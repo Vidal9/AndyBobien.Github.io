@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lets Chat!</title>
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    
+    <style>
+    
+    #aikido {
+  margin-top: 40em;
+  margin-left:1em;
+  
+  }
+  
+  #navbar {
+    margin-left:100px;
+    margin-top:-86px;
+  }
+  
+  #application {
+    border:2px solid black;
+    padding:20px;
+    margin-left:150px;
+
+  }
+  
+  .apply {
+     margin-left:280px;
+     margin-right:400px;
+     margin-top:60px;
+  }
+      .intro {
+        margin-top:100px;
+        margin-left:248px;
+      }
+    </style>
+    
+</head>
+
+
+
+<body>
+  
+  <a href="Resume.html"> <div class="marisol"> <img src="logo.jpeg" style="height:95px;width:104px;margin-left:10px;margin-top:10px"> </div> </a>
+  
+   <h1 id="navbar">
+      <ul>
+        <button type="button" class="btn btn primary"><a href="Resume.html">Home</a></button>
+        <button type="button" class="btn btn primary"><a href="Bio.html">Bio</a></button>
+        <button type="button" class="btn btn primary"><a href="Work.html">My Portfolio</a></button>
+        <button type="button" class="btn btn primary"><a href="letschat.html">Let's Chat!</a></button>
+      </ul>
+    </h1>
+    
+    
+    <div class="intro">
+    <h1 id="greets" style="margin-left:178px;color:white;background-color:#0009;margin-right:560px">Thanks for your visit!</h1> 
+    <h1 style="color:white;background-color:#0009;margin-right:260px">What kind of website or app can I build for you? </h1>
+    </div>
+    
+    
+ <div class="apply">
+ <form action="www.Andybobien95@gmail.com" method="post" id="application">
+   <p><b>First name</b>:
+    <input type="text" class="nombre" name="username" size="15" maxlength="30" >
+   </p>
+   
+   <p><b>Email address</b>:
+    <input id="name" type="text"  name="username" size="20" maxlength="30">
+   </p>
+   
+   <p><b>Message</b>:</p>
+    <textarea name="message" rows="4" cols="43"></textarea>
+  
+  <button onclick="Validate()">SUBMIT</button>
+</form>
+</div>
+ 
+  
+  
+<footer>
+  <center style="color:black;font weight:900;margin-top:10px">
+    &copy;<b>2019</b><br />
+    <a class="link" href="#">Terms Of Service</a>
+  </center>
+  
+</footer>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+<script>
+  
+  function Banging() {
+    document.body.style.backgroundImage="url('computacion.jpeg')";
+    document.body.style.backgroundSize="1380px 710px";
+  }
+  Banging();
+  
+  
+  function Validate() {
+   
+    if(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(application.name.value)) {
+      
+      var attach = document.getElementsByClassName("nombre")[0].value;
+      alert("Thank You" +" "+ attach +", " + "I will respond to your request within 24-48 hours!");
+    } 
+    
+    else {
+      alert("Invalid Email");
+    }
+ 
+  }
+  Validate();
+  
+ function Horn() {
+  document.getElementById("greets").innerHTML = "Thanks for your visit!";
+ }
+ 
+ Horn();
+</script>
+
+
+</body>
+
+</html>
