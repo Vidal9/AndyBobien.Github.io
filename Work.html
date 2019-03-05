@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+ 
+ 
+ <head>
+   <title>My Portfolio</title>
+   
+   
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+   
+   
+   <style>
+   
+   #navbar ul {
+ list-style-type:none;
+ padding-left: 15em;
+ 
+}
+
+#navbar {
+  clear: both;
+  width: 100%;
+  margin-left:-85px;
+  margin-top:-80px;
+ 
+}
+
+#navbar ul li a {
+  font-family: Arial;
+  font-size: 24px;
+  font-weight: 900;
+  text-decoration: none;
+  color: black;
+  display: inline;
+  padding: 0 2em 0 1em;
+  border: 2px outset black;
+  
+}
+
+#navbar ul li {
+  display:inline;
+}
+     
+  span {
+       display:inline-block;
+       width:335px;
+     }
+     
+     .img-fluid {
+        width: 95%;
+        border:4px purple solid;
+     }
+     
+     .century {
+       color:black;
+       margin-top:-50px;
+     }
+     
+     .arrow {
+       cursor:pointer;
+       position:absolute;
+       top:10%;
+       margin-top:-55px;
+       width:0;
+       height:0;
+       border-style:solid;
+     }
+     
+     #left {
+       border-width:30px 40px 30px 0;
+       border-color:transparent black transparent transparent;
+       left:0;
+       margin-left:120px;
+       margin-top:200px;
+     }
+     
+     #right {
+       border-width:30px 0 30px 40px;
+       border-color:transparent transparent transparent black;
+       right:0;
+       margin-right:120px;
+       margin-top:200px;
+     }
+     
+     .image1 {background-image:url("Motivationapp.jpeg");height:620px;width:945px;margin-left:180px;margin-top:-5px;}
+     .image2 {background-image:url("Nations.Jpeg"); height:540px;width:900px;margin-left:230px;margin-top:-5px;}
+     .image3 {background-image:url("lempira.jpeg"); height:540px;width:1080px;margin-left:150px;margin-top:-5px;}
+</style>
+</head> 
+ 
+ 
+<body>
+  
+  <a href="The Resume.html"> <div class="marisol"> <img src="logo.jpeg" style="height:95px;width:104px;margin-left:10px;margin-top:10px"> </div> </a>
+   
+    <h1 id="navbar">
+      <ul>
+        <button type="button" class="btn btn primary"><a href="Resume.html">Home</a></button>
+        <button type="button" class="btn btn primary"><a href="Bio.html">Bio</a></button>
+        <button type="button" class="btn btn primary"><a href="Work.html">Portfolio</a></button>
+        <button type="button" class="btn btn primary"><a href="letschat.html">Let's Chat!</a></button>
+      </ul>
+    </h1>
+   
+  
+   <div class="wrap">
+    
+   
+   <div id="left" class="arrow"></div>  
+     <div class="slider">
+      
+      <a href="#"><div class="slide image1">
+        <div class="content"></div>
+          <span></span>
+        </div></a>
+        
+        <a href="#"><div class="slide image2">
+         <div class="content"></div>
+          <span></span>
+        </div></a>
+        
+        <a href="#"><div class="slide image3">
+         <div class="content"></div>
+          <span></span>
+        </div></a>
+        
+     </div>
+     
+     <div id="right" class="arrow"></div>
+  </div>
+  
+
+   
+   
+ 
+    
+   
+ <script>
+  
+  function Tego() {
+    document.body.style.backgroundImage = "url('computacion.jpeg')";
+    document.body.style.backgroundSize = "1380px 680px";
+  }
+  
+  Tego();
+  
+  
+  var motivation = document.querySelectorAll(".slide");
+  var arrowleft = document.querySelector("#left");
+  var arrowright = document.querySelector("#right");
+  var start = 0;
+  
+  //clear images
+    function Loop() {
+  for(i=0;i<motivation.length;i++) {
+         motivation[i].style.display="none";
+     }
+}  
+  //int slider
+  function Again() {
+    Loop();
+    motivation[0].style.display="block";
+  }
+  
+  
+  //before
+  function Then() {
+    Loop();
+    motivation[start-1].style.display="block";
+    start--;
+  }
+  //after
+  function After() {
+    Loop();
+    motivation[start+1].style.display="block";
+    start++;
+  }
+  
+  //before arrow
+  arrowleft.addEventListener('click',function() {
+    if(start===0) {
+      start=motivation.length;
+    }
+    Then();
+  });
+  //after arrow
+  arrowright.addEventListener('click',function() {
+    if(start===motivation.length-1) {
+      start = - 1;
+    }
+    After();
+  });
+  
+  Again();
+  
+  
+
+
+  
+
+
+  
+     
+   </script> 
+   
+   
+    <br /> <br /> <br /> <br />
+   
+  <footer>
+    <center class="century">
+      &copy;2019<br />
+      <a class="link" href="#" style="color:black">Terms Of Service</a>
+    </center>
+  </footer>
+   
+ </body>
+  
+  
+</html>
